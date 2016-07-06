@@ -1,0 +1,11 @@
+watchdog,bool,1
+analog1,float,2
+analog2,float,3
+analog3,float,4
+analog4,float,5
+analog5,float,6
+analog6,float,7
+analog7,float,8
+analog8,float,9
+analog9,float,10
+analog10,float,11
