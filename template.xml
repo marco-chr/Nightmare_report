@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Template>
+      <Logopath>./logo.png</Logopath>
+      <Logowidth>1.5</Logowidth>
+      <Area>AREA01</Area>
+      <Machine>MACHINE01</Machine>
+      <Company>ACME LTD</Company>
+      <Site>SITE01</Site>
+      <ReportName>REPORT01</ReportName>
+</Template>

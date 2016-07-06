@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Settings>
+  <Stations>
+    <Station>
+      <StationId>1</StationId>
+      <OPCServer>Matrikon.OPC.Simulation.1</OPCServer>
+      <DbConnectionString>dbname=reportdb user=postgres password=joellevandyne88!</DbConnectionString>
+      <ConnectionURL></ConnectionURL>
+      <Watchdog_Delay>10</Watchdog_Delay>
+      <SampleTime>5</SampleTime>
+      <FTPHostname>127.0.0.1</FTPHostname>
+      <FTPUserId>ftpuser</FTPUserId>
+      <FTPPassword>ftpuser</FTPPassword>
+      <FTPTimeout>5000</FTPTimeout>
+      <TestTag>.run_batch</TestTag>
+      <BatchTag>.batch_id</BatchTag>
+      <ProductTag>.product_id</ProductTag>
+      <WatchdogTag>.watchdog</WatchdogTag>
+      <FileGroups>
+        <FileGroup>
+          <RemoteDir>C:/ftproot/</RemoteDir>
+          <LocalDir>./</LocalDir>
+          <FileMask>alarms_</FileMask>
+          <SQLStatement>INSERT INTO alarms (timestring ,comment ,value ,state ,operator ,msgnumber ,machineid) VALUES (%s, %s, %s, %s, %s, %s, %s)</SQLStatement>
+        </FileGroup>
+        <FileGroup>
+          <RemoteDir>C:/ftproot/</RemoteDir>
+          <LocalDir>./</LocalDir>
+          <FileMask>audit_</FileMask>
+          <SQLStatement>INSERT INTO audittrail (machineid ,timestamp ,userid ,objectid ,description ,comment ,newvalue ,oldvalue) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)</SQLStatement>
+        </FileGroup>
+      </FileGroups>
+    </Station>
+  </Stations>
+</Settings>
